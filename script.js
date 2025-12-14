@@ -1,11 +1,17 @@
-//your JS code here. If required.
-let first = document.getElementById('first')
-let last = document.getElementById('last')
-let contact = document.getElementById('contact')
-let email = document.getElementById('email')    
+let form = document.getElementById("userForm");
 
-let btn = document.getElementById("btn")
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
 
-btn.addEventListener('click', ()=>{
-    alert(`First Name: ${first.value} Last Name: ${last.value} Phone Number: ${contact.value} Email ID: ${email.value}`)
-})
+	let first = document.getElementById("first").value;
+	let last = document.getElementById("last").value;
+	let contact = document.getElementById("contact").value;
+	let email = document.getElementById("email").value;
+
+	alert(
+		"First Name: " + first +
+		"\nLast Name: " + last +
+		"\nPhone Number: " + contact +
+		"\nEmail ID: " + email
+	);
+});
